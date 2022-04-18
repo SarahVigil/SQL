@@ -1,0 +1,28 @@
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, item TEXT, style TEXT, color TEXT, price INTEGER);
+
+INSERT INTO clothes VALUES (1, "shirt", "short sleeve", "white", 10);
+INSERT INTO clothes VALUES (2, "shirt", "long sleeve", "black", 10);
+INSERT INTO clothes VALUES (3, "pants", "short", "blue", 15);
+INSERT INTO clothes VALUES (4, "pants", "long", "blue", 20);
+INSERT INTO clothes VALUES (5, "pants", "long", "black", 20);
+INSERT INTO clothes VALUES(6, "skirt", "short", "white", 15);
+INSERT INTO clothes VALUES(7, "hat", "baseball", "white", 15);
+INSERT INTO clothes VALUES(8, "skirt", "long", "pink", 15);
+INSERT INTO clothes VALUES(9, "shirt", "long sleeve", "red", 20);
+INSERT INTO clothes VALUES(10, "jewelry", "ring", "gold", 15);
+INSERT INTO clothes VALUES(11, "jewelry", "necklace", "gold", 15);
+INSERT INTO clothes VALUES(12, "jewelry", "ring", "silver", 5);
+INSERT INTO clothes VALUES(13, "hat", "bucket", "blue", 10);
+INSERT INTO clothes VALUES(14, "pants", "short", "black", 15);
+INSERT INTO clothes VALUES(15, "shoes", "sandal", "black", 25);
+
+SELECT * FROM clothes;
+
+SELECT * FROM clothes ORDER BY price;
+
+
+
+SELECT color, COUNT(*) FROM clothes GROUP BY color;
+
+SELECT * FROM clothes WHERE color = "black";
+
