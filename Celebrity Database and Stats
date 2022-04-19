@@ -1,0 +1,47 @@
+/* Create table about the people and what they do here */
+/* Create table about the people and what they do here */
+CREATE TABLE celebrities  (id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT,
+    movies TEXT,
+    oscar TEXT,
+    birthdate TEXT);
+INSERT INTO celebrities (first_name, last_name, movies, oscar, birthdate)
+    VALUES ("Michael", "Douglas", "Basic Instint", "yes", "1944-09-25");
+INSERT INTO celebrities (first_name, last_name, movies, oscar, birthdate)
+    VALUES ("Annette", "Bening", "American Beauty", "yes", "1958-05-29");
+INSERT INTO celebrities (first_name, last_name, movies, oscar, birthdate)
+    VALUES ("Warren", "Beaty", "Bonnie and Clyde", "yes", "1937-05-30");
+INSERT INTO celebrities (first_name, last_name, movies, oscar, birthdate)
+    VALUES ("Catherine", "Zeta-Jones", "Chicago", "yes", "1969-09-25");
+INSERT INTO celebrities (first_name, last_name, movies, oscar, birthdate)
+    VALUES ("Tom", "Hanks", "Forrest Gump", "yes", "1956-07-09");
+INSERT INTO celebrities (first_name, last_name, movies, oscar, birthdate)
+    VALUES ("Johnny", "Depp", "Pirates of the Carribean", "no", "1963-07-09");
+    
+ CREATE TABLE celebrity_spouse (id INTEGER PRIMARY KEY,
+    celebrities_id INTEGER,
+    spouse TEXT);
+    
+INSERT INTO celebrity_spouse (celebrities_id, spouse)
+    VALUES (1, "Catherine Zeta-jones");
+INSERT INTO celebrity_spouse (celebrities_id, spouse)
+    VALUES (2, "Warren Beaty");
+INSERT INTO celebrity_spouse (celebrities_id, spouse)
+    VALUES (3, "Annette Benning");
+INSERT INTO celebrity_spouse (celebrities_id, spouse)
+    VALUES (4, "Michael Douglas");   
+INSERT INTO celebrity_spouse (celebrities_id, spouse)
+    VALUES (5, "null"); 
+INSERT INTO celebrity_spouse (celebrities_id, spouse)
+    VALUES (6, "null"); 
+    
+Select * from celebrities;
+
+SELECT * from celebrity_spouse;
+
+
+SELECT celebrities.first_name, celebrities.last_name, celebrity_spouse.spouse 
+FROM celebrities 
+inner join celebrity_spouse 
+ON celebrity_spouse.id=celebrities.id
