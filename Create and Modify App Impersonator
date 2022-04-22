@@ -1,0 +1,31 @@
+# In this SQL code,  I created a table with Twitter information and modified the database. 
+
+CREATE TABLE Twitter (
+    id INTEGER PRIMARY KEY,
+    title TEXT,
+    tweet TEXT,
+    date TEXT);
+    
+INSERT INTO Twitter (id, title, tweet, date)
+VALUES (1, "Monday", "Went to the ice cream shop today and ate a chocolate cone", "2016-2-1");
+INSERT INTO Twitter (id, title, tweet, date)
+VALUES (2, "Tuesday", "Took the dog for a walk and saw a butterfly", "2016-2-2");
+INSERT INTO Twitter (id, title, tweet, date)
+VALUES (3, "Wednesday", "Bought a new skirt from the mall", "2016-2-3");
+INSERT INTO Twitter (id, title, tweet, date)
+VALUES (4, "Thursday", "Got an oil change and washed my car", "2016-2-4");
+ 
+SELECT * FROM Twitter;
+
+UPDATE Twitter SET tweet = "Went to the ice cream shop today and ate a vanilla cone" WHERE id = 1;
+
+
+SELECT * FROM twitter;
+
+
+DELETE FROM Twitter WHERE id = 3;
+
+SELECT * FROM Twitter;
+
+    
+    
